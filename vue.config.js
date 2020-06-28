@@ -4,7 +4,7 @@ module.exports = {
   runtimeCompiler: true,
   publicPath: process.env.NODE_ENV === 'production'
     ? '/contrateonline-client/'
-    : '/contrateonline-client/',
+    : '/',
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', '.scss'],
