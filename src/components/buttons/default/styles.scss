@@ -1,0 +1,54 @@
+button {
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition-duration: 0.9s;
+}
+
+.loading {
+    background: url('../../../assets/imgs/loading.svg') no-repeat center;
+    background-size: 23px;
+    background-color: $info;
+    text-indent: -1000em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: $info;
+    color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: $light;
+}
+
+.color-primary {
+    background-color: $primary;
+}
+.color-secondary {
+    background-color: $secondary;
+}
+.color-success {
+    background-color: $success;
+}
+.color-info {
+    background-color: $cyan;
+}
+.color-warning {
+    background-color: $warning;
+}
+.color-danger {
+    background-color: $danger;
+}
+.color-light {
+    background-color: $light;
+}
+.color-dark {
+    background-color: $dark;
+}
