@@ -41,7 +41,6 @@ export default {
   },
   methods: {
     checked(event) {
-      console.log(event());
       this.sidebar = event();
     },
   },
@@ -49,5 +48,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "~@/assets/scss/style.scss";
   @import "~@/components/menu/default/styles.scss";
 </style>
