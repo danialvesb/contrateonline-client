@@ -2,7 +2,7 @@
   <section>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"
            v-on:change="checked($event)"/>
-    <label for="openSidebarMenu" class="sidebarIconToggle">
+    <label for="openSidebarMenu" class="sidebarIconToggle" >
       <div class="spinner diagonal part-1"></div>
       <div class="spinner horizontal"></div>
       <div class="spinner diagonal part-2"></div>

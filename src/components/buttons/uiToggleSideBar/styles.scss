@@ -4,6 +4,11 @@ input[type=checkbox] {
     display: none;
 }
 .sidebarIconToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
     transition: all 0.3s;
     box-sizing: border-box;
     cursor: pointer;
@@ -13,8 +18,10 @@ input[type=checkbox] {
     width: 100%;
     top: 22px;
     left: 15px;
-    height: 22px;
-    width: 22px;
+    height: 30px;
+    width: 30px;
+    background-color: $gray-700;
+    border-radius: 50px;
 }
 .spinner {
     transition: all 0.3s;
@@ -22,27 +29,33 @@ input[type=checkbox] {
     position: absolute;
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: $white;
 }
 .horizontal {
+    width: 80%;
     transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
     float: left;
     margin-top: 3px;
+    background-color: $white;
 }
 .diagonal.part-1 {
+    width: 80%;
     position: relative;
     transition: all 0.3s;
     box-sizing: border-box;
     float: left;
+    background-color: $white;
 }
 .diagonal.part-2 {
+    width: 80%;
     transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
     float: left;
     margin-top: 3px;
+    background-color: $white;
 }
 input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
     transition: all 0.3s;
@@ -53,7 +66,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
     transition: all 0.3s;
     box-sizing: border-box;
     transform: rotate(135deg);
-    margin-top: 8px;
+    margin-top: 1px;
 }
 input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transition: all 0.3s;

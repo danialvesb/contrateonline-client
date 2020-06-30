@@ -1,25 +1,25 @@
 <template>
-  <div class="side-conteiner">
+  <div>
        <ui-toggle-side-bar v-on:checkboxToggle="checked($event)"/>
     <div id="sidebarMenu" v-bind:class="[sidebar ? 'sidebarOpen' : '']">
       <ul class="sidebarMenuInner">
         <li>
-          Jelena Jovanovic <span>Web Developer</span>
+           Daniel Alves <span>Cliente</span>
         </li>
         <li>
-          <a href="https://vanila.io" target="_blank">Company</a>
+          <a target="_blank">Lista de serviços</a>
         </li>
         <li>
-          <a href="https://instagram.com/plavookac" target="_blank">Instagram</a>
+          <a target="_blank">Minhas solicitações</a>
         </li>
         <li>
-          <a href="https://twitter.com/plavookac" target="_blank">Twitter</a>
+          <a target="_blank">Conversas</a>
         </li>
         <li>
-          <a href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg" target="_blank">YouTube</a>
+          <a target="_blank">Ofertar seviço</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/plavookac/" target="_blank">Linkedin</a>
+          <a target="_blank">Chamados</a>
         </li>
       </ul>
     </div>
