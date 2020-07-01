@@ -1,14 +1,12 @@
 <template>
   <section class="main">
-    <section>
+    <section class="header">
       <slot name="header">
       </slot>
     </section>
-    <section>
+    <section class="content">
       <slot name="sidebar">
       </slot>
-    </section>
-    <section>
       <slot name="content">
       </slot>
     </section>

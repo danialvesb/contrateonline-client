@@ -1,10 +1,9 @@
 <template>
-  <div>
-       <ui-toggle-side-bar v-on:checkboxToggle="checked($event)"/>
+  <div class="container-sidebar">
     <div id="sidebarMenu" v-bind:class="[sidebar ? 'sidebarOpen' : '']">
       <ul class="sidebarMenuInner">
         <li>
-           Daniel Alves <span>Cliente</span>
+          Daniel Alves <span>Cliente</span>
         </li>
         <li>
           <a target="_blank">Lista de serviços</a>
@@ -27,22 +26,18 @@
 </template>
 
 <script>
-import { uiToggleSideBar } from '@/components/buttons/index';
 
 export default {
   name: 'index',
-  data() {
-    return {
-      sidebar: null,
-    };
+  props: {
+    sidebar: {
+      type: Boolean,
+      require: true,
+    },
   },
   components: {
-    uiToggleSideBar,
   },
   methods: {
-    checked(event) {
-      this.sidebar = event();
-    },
   },
 };
 </script>
