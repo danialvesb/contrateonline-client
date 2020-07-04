@@ -1,15 +1,13 @@
 <template>
   <button
-    v-bind:class="['color-'+color]+[' ']+[loading ? 'loading': '']"
-    v-bind:style="'font-size:'+fontSize+'px;'+
-      'width:'+width+'px'"
+    v-bind:class="{ 'color': color, 'loading': loadingData }"
+    v-bind:style="{ 'fontSize': `${fontSize}px`, 'width': `${width}px` }"
     v-on:click="onClick($event)"
     :disabled="loading">{{ text }}
   </button>
 </template>
 
 <script>
-
 export default {
   props: {
     text: {
@@ -33,13 +31,16 @@ export default {
       type: Boolean,
     },
   },
+  data() {
+    return {
+      loadingData: this.loading ? this.loading : ' ',
+    };
+  },
   name: 'uibutton',
   methods: {
     onClick(event) {
       event.preventDefault();
-      this.$emit('evt-button', () => {
-        alert('olá');
-      });
+      this.$emit('evt-button', () => event);
     },
   },
 };

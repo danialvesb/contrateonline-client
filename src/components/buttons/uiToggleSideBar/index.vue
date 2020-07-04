@@ -1,22 +1,22 @@
 <template>
   <section>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"
-           v-on:change="checked($event)"/>
+           v-on:change="toggleSideBar()"/>
     <label for="openSidebarMenu" class="sidebarIconToggle" >
-      <div class="spinner diagonal part-1"></div>
-      <div class="spinner horizontal"></div>
-      <div class="spinner diagonal part-2"></div>
+      <div class="spinner diagonal part-1"/>
+      <div class="spinner horizontal"/>
+      <div class="spinner diagonal part-2"/>
     </label>
   </section>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'uiToggleSideBar',
   methods: {
-    checked(event) {
-      this.$emit('checkboxToggle', () => event.target.checked);
-    },
+    ...mapActions(['toggleSideBar']),
   },
 };
 </script>

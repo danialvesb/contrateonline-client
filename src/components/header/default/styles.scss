@@ -3,13 +3,9 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-    box-shadow: none;
     background-color: $white;
-    position: fixed;
-    height: 60px!important;
-    overflow: hidden;
-    z-index: 10;
+    height: 100%;
+    z-index: 999;
     border-bottom: solid 1px;
     border-color: $gray-300;
 }

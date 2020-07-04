@@ -7,7 +7,7 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <uiCard />Oi
+      <uiCard />
     </template>
 
     </dashboard-template>
