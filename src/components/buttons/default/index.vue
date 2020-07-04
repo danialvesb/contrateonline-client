@@ -1,42 +1,48 @@
 <template>
   <button
-    v-bind:class="{ 'color': color, 'loading': loadingData }"
-    v-bind:style="{ 'fontSize': `${fontSize}px`, 'width': `${width}px` }"
+    v-bind:class="[{ 'loading': loadingData}, `color-${color}`]"
+    v-bind:style="{fontSize: fontSize, width: width,
+    textAlign: align}"
     v-on:click="onClick($event)"
-    :disabled="loading">{{ text }}
+    :disabled="disabled">
+    <slot/>
   </button>
 </template>
 
 <script>
 export default {
+  name: 'uibutton',
   props: {
-    text: {
-      required: true,
-      type: String,
-    },
     color: {
-      required: true,
+      required: false,
       type: String,
     },
     fontSize: {
-      required: true,
+      required: false,
       type: String,
     },
     width: {
-      required: true,
+      required: false,
       type: String,
     },
-    loading: {
-      required: true,
+    disabled: {
+      required: false,
       type: Boolean,
+    },
+    loading: {
+      required: false,
+      type: Boolean,
+    },
+    align: {
+      required: false,
+      type: String,
     },
   },
   data() {
     return {
-      loadingData: this.loading ? this.loading : ' ',
+      loadingData: this.loading ? this.loading : false,
     };
   },
-  name: 'uibutton',
   methods: {
     onClick(event) {
       event.preventDefault();

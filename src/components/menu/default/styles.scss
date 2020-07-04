@@ -13,36 +13,34 @@
 }
 .sidebarOpen {
     width: 250px!important;
+    .sidebarMenuInner{
+        transform: translate(0);
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+    }
 }
 
 .sidebarMenuInner{
     margin:0;
     padding:0;
+    width: 250px;
+    transform: translate(-250px);
     border-top: 1px solid rgba(255, 255, 255, 0.10);
+    transition: 0.4s ease-in-out!important;
 }
-.sidebarMenuInner li{
+.sidebarMenuInner li {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    margin: 10px;
     list-style: none;
-    color: #fff;
-    margin: 20px;
     text-transform: uppercase;
 }
-.sidebarMenuInner a:hover {
-    background-color: $gray-100;
-    border-radius: 5px;
+.separator {
+    width: 100%;
+    border-bottom: solid 1px;
+    border-color: white;
+    margin: 0!important;
 }
 .sidebarMenuInner li span{
     display: block;
     color: rgba(255, 255, 255, 0.50);
-}
-.sidebarMenuInner li a{
-    color: $white;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 14px;
 }

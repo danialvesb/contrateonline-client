@@ -2,53 +2,54 @@ button {
     display: inline-block;
     outline: none;
     text-decoration: none;
-    text-align: center;
-    color: white;
     border: none;
     border-radius: 3px;
-    transition-duration: 0.9s;
+    background-color: transparent;
+    padding: 5px;
 }
-
 .loading {
     background: url('../../../assets/imgs/loading.svg') no-repeat center;
     background-size: 23px;
-    background-color: $info;
     text-indent: -1000em;
     cursor: pointer;
     overflow: hidden;
 }
-
 button:hover {
-    background-color: $info;
-    color: white;
+    background-color: $gray-100;
     cursor: pointer;
 }
-
 button:active {
     background-color: $light;
 }
-
 .color-primary {
     background-color: $primary;
+    color: $white;
 }
 .color-secondary {
     background-color: $secondary;
+    color: $white;
 }
 .color-success {
     background-color: $success;
+    color: $white;
 }
 .color-info {
     background-color: $cyan;
+    color: $white;
 }
 .color-warning {
     background-color: $warning;
+    color: $white;
 }
 .color-danger {
     background-color: $danger;
+    color: $white;
 }
 .color-light {
     background-color: $light;
+    color: $white;
 }
 .color-dark {
     background-color: $dark;
+    color: $white;
 }

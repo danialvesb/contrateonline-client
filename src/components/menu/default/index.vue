@@ -4,30 +4,33 @@
       <li>
         Daniel Alves <span>Cliente</span>
       </li>
+      <li class="separator"/>
       <li>
-        <a target="_blank">Lista de serviços</a>
+        <uiButton align="left" width="100%" color="success">Lista de serviços</uiButton>
       </li>
       <li>
-        <a target="_blank">Minhas solicitações</a>
+        <uiButton align="left">Minhas solicitações</uiButton>
       </li>
       <li>
-        <a target="_blank">Conversas</a>
+        <uiButton align="left">Conversas</uiButton>
       </li>
       <li>
-        <a target="_blank">Ofertar seviço</a>
+        <uiButton align="left">Ofertar seviço</uiButton>
       </li>
       <li>
-        <a target="_blank">Chamados</a>
+        <uiButton align="left">Chamados</uiButton>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
+import { uiButton } from '@/components/buttons/index';
 
 export default {
   name: 'index',
   components: {
+    uiButton,
   },
   methods: {
   },
