@@ -1,5 +1,9 @@
 <template>
   <div class="ui-container">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+    </div>
   </div>
 </template>
 

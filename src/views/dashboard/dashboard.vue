@@ -8,6 +8,15 @@
     </template>
     <template v-slot:content>
       <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
+      <uiCard />
     </template>
 
     </dashboard-template>
