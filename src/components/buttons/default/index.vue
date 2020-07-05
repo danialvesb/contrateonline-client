@@ -1,7 +1,7 @@
 <template>
   <button
     v-bind:class="[{ 'loading': loadingData}, `color-${color}`]"
-    v-bind:style="{fontSize: fontSize, width: width,
+    v-bind:style="{fontSize: `${fontSize}rem`, width: width,
     textAlign: align}"
     v-on:click="onClick($event)"
     :disabled="disabled">
@@ -46,7 +46,7 @@ export default {
   methods: {
     onClick(event) {
       event.preventDefault();
-      this.$emit('evt-button', () => event);
+      this.$emit('evtButton', () => event);
     },
   },
 };

@@ -4,7 +4,6 @@ button {
     text-decoration: none;
     border: none;
     border-radius: 3px;
-    background-color: transparent;
     padding: 5px;
 }
 .loading {
@@ -23,33 +22,33 @@ button:active {
 }
 .color-primary {
     background-color: $primary;
-    color: $white;
 }
 .color-secondary {
     background-color: $secondary;
-    color: $white;
 }
 .color-success {
     background-color: $success;
-    color: $white;
 }
+.color-success:hover {
+    background-color: $success!important;
+}
+
 .color-info {
     background-color: $cyan;
-    color: $white;
 }
 .color-warning {
     background-color: $warning;
-    color: $white;
 }
 .color-danger {
     background-color: $danger;
-    color: $white;
 }
 .color-light {
     background-color: $light;
-    color: $white;
 }
 .color-dark {
     background-color: $dark;
-    color: $white;
+}
+
+.color-default {
+    background-color: transparent;
 }

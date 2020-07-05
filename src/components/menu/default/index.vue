@@ -4,21 +4,15 @@
       <li>
         Daniel Alves <span>Cliente</span>
       </li>
-      <li class="separator"/>
-      <li>
-        <uiButton align="left" width="100%" color="success">Lista de serviços</uiButton>
-      </li>
-      <li>
-        <uiButton align="left">Minhas solicitações</uiButton>
-      </li>
-      <li>
-        <uiButton align="left">Conversas</uiButton>
-      </li>
-      <li>
-        <uiButton align="left">Ofertar seviço</uiButton>
-      </li>
-      <li>
-        <uiButton align="left">Chamados</uiButton>
+      <separator width="80%" opacity=".5"/>
+      <li v-for="( item, index ) in sidebar" :key="index">
+        <uiButton
+          fontSize="1.1"
+          align="left"
+          width="100%"
+          v-on:evtButton="onClick(index, item)"
+          :color="item.active ? 'success': 'default'">{{ item.value }}
+        </uiButton>
       </li>
     </ul>
   </div>
@@ -26,14 +20,64 @@
 
 <script>
 import { uiButton } from '@/components/buttons/index';
+import separator from '@/components/separator.vue';
 
 export default {
   name: 'index',
   components: {
     uiButton,
+    separator,
+  },
+  data() {
+    return {
+      sidebar: [
+        {
+          value: 'Lista de serviços',
+          active: true,
+          icon: '',
+          path: '/inicio',
+        },
+        {
+          value: 'Minhas solicitações',
+          active: false,
+          icon: '',
+          path: '/solicitacoes',
+        },
+        {
+          value: 'Conversas',
+          active: false,
+          icon: '',
+          path: '/conversas',
+        },
+        {
+          value: 'Ofertar seviço',
+          active: false,
+          icon: '',
+          path: '/servico/ofertar',
+        },
+        {
+          value: 'Chamados',
+          active: false,
+          icon: '',
+          path: '/chamados',
+        },
+      ],
+    };
   },
   methods: {
+    onClick(indexPara, { path }) {
+      this.sidebar = this.sidebar.map((item, index) => ({
+        value: item.value,
+        active: indexPara === index,
+        icon: item.icon,
+        path: item.path,
+      }));
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
+    },
   },
+
   computed: {
     isActiveSideBar() {
       return this.$store.getters.isActiveSideBar;
