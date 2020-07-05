@@ -66,22 +66,39 @@ export default {
   },
   methods: {
     onClick(indexPara, { path }) {
-      this.sidebar = this.sidebar.map((item, index) => ({
-        value: item.value,
-        active: indexPara === index,
-        icon: item.icon,
-        path: item.path,
-      }));
       if (this.$route.path !== path) {
+        this.alterOptionSideBar(indexPara);
         this.$router.push(path);
       }
     },
-  },
+    alterOptionSideBar(indexPara = null, path = null) {
+      const indexPath = this.sidebar.findIndex((element) => element.path === path);
 
+      if (indexPara) {
+        this.sidebar.map((item, index) => ({
+          value: item.value,
+          active: indexPara === index,
+          icon: item.icon,
+          path: item.path,
+        }));
+      }
+      if (indexPath) {
+        this.sidebar = this.sidebar.map((item, index) => ({
+          value: item.value,
+          active: indexPath === index,
+          icon: item.icon,
+          path: item.path,
+        }));
+      }
+    },
+  },
   computed: {
     isActiveSideBar() {
       return this.$store.getters.isActiveSideBar;
     },
+  },
+  mounted() {
+    this.alterOptionSideBar(null, this.$route.path);
   },
 };
 </script>

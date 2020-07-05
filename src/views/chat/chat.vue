@@ -7,40 +7,21 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
     </template>
-    </dashboard-template>
+  </dashboard-template>
 </template>
 
 <script>
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
 import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
-import { uiCard } from '@/components/cards/index';
 
 export default {
-  name: 'dashboard',
+  name: 'chat',
   components: {
     dashboardTemplate,
     uiMenuSideBar,
     uiHeader,
-    uiCard,
   },
   data() {
     return {
