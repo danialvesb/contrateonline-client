@@ -7,48 +7,24 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <uiCard>
-        <template slot="header">
-          Olá
-        </template>
-        <template slot="body">
-          Olá
-        </template>
-      </uiCard>
-      <uiCard>
-        <template slot="header">
-          Olá
-        </template>
-        <template slot="body">
-          Olá
-        </template>
-      </uiCard>
-      <uiCard>
-        <template slot="header">
-          Olá
-        </template>
-        <template slot="body">
-          Olá
-        </template>
-      </uiCard>
-      <uiCard>
-        <template slot="header">
-          Olá
-        </template>
-        <template slot="body">
-          Olá
-        </template>
-      </uiCard>
-      <uiCard>
-        <template slot="header">
-          Olá
-        </template>
-        <template slot="body">
-          Olá
-        </template>
-      </uiCard>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá"/>
     </template>
-
     </dashboard-template>
 </template>
 

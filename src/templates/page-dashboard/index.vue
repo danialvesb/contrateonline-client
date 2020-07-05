@@ -1,6 +1,6 @@
 <template>
   <section class="main">
-    <section class="header">
+    <section class="header" v-bind:class="{ 'headerLeft':  isActiveSideBar }">
       <slot name="header">
       </slot>
     </section>
@@ -8,7 +8,7 @@
       <slot name="sidebar">
       </slot>
     </section>
-    <section class="content" v-bind:class="{ 'contentLeft' :  isActiveSideBar }">
+    <section class="content" v-bind:class="{ 'contentLeft':  isActiveSideBar }">
       <slot name="content">
       </slot>
     </section>

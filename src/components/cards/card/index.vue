@@ -1,12 +1,10 @@
 <template>
   <div class="ui-container">
     <div class="card-header">
-      <slot name="header">
-      </slot>
+      {{ title }}
     </div>
     <div class="card-body">
-      <slot name="body">
-      </slot>
+      {{ text }}
     </div>
   </div>
 </template>
@@ -15,6 +13,14 @@
 
 export default {
   props: {
+    title: {
+      require: true,
+      type: String,
+    },
+    text: {
+      require: true,
+      type: String,
+    },
   },
   name: 'uicard',
   methods: {
