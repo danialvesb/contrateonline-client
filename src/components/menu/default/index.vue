@@ -4,7 +4,7 @@
       <li>
         Daniel Alves <span>Cliente</span>
       </li>
-      <separator width="80%" opacity=".5"/>
+      <separator width="80%" color="rgba(250,250,250, .5)"/>
       <li v-for="( item, index ) in sidebar" :key="index">
         <uiButton
           fontSize="1.1"

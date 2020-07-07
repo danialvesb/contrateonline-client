@@ -1,29 +1,40 @@
 <template>
   <dashboard-template>
     <template v-slot:header>
-      <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)"/>
+      <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)">
+        <template v-slot:breadcrumbs>
+          <b style="color: #495057">Ofertas de serviços</b>
+        </template>
+      </ui-header>
     </template>
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
-      <uiCard title="Olá" text="Olá"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
+      <uiCard title="Olá" text="Olá" colorHeader="#3399FF"/>
     </template>
     </dashboard-template>
 </template>

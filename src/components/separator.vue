@@ -1,7 +1,7 @@
 <template>
   <div style="width: 100%; display: flex; justify-content: center">
     <div
-      v-bind:style="{width: width, borderBottom: `solid 1px rgba(255,255,255,${opacity})`}"/>
+      v-bind:style="{width: width, borderBottom: `solid 1px ${color}` }"/>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
       type: String,
       require: false,
     },
-    opacity: {
+    color: {
       type: String,
       require: false,
     },

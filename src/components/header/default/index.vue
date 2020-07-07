@@ -1,6 +1,10 @@
 <template>
   <div class="header">
     <ui-toggle-side-bar v-on:checkboxToggle="checked($event)"/>
+    <div class="breadcrumbs">
+      <slot name="breadcrumbs">
+      </slot>
+    </div>
   </div>
 </template>
 
