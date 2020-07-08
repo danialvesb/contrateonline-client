@@ -4,6 +4,7 @@
       <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)">
         <template v-slot:breadcrumbs>
           <b style="color: #495057">Ofertas de serviços</b>
+          <ui-input/>
         </template>
       </ui-header>
     </template>
@@ -44,6 +45,7 @@ import dashboardTemplate from '@/templates/page-dashboard/index.vue';
 import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
 import { uiCard } from '@/components/cards/index';
+import { uiInput } from '@/components/inputs/index';
 
 export default {
   name: 'dashboard',
@@ -52,6 +54,7 @@ export default {
     uiMenuSideBar,
     uiHeader,
     uiCard,
+    uiInput,
   },
   data() {
     return {
@@ -71,4 +74,5 @@ export default {
 
 <style scoped lang="scss">
   @import "~@/assets/scss/style.scss";
+  @import "~@/views/dashboard/styles.scss";
 </style>
