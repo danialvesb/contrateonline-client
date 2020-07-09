@@ -5,20 +5,22 @@
     width: 150px;
     height: 35px;
     margin: 10px;
-    border: solid 1px $gray-800;
+
     border-radius: 5px;
+    background-color: $gray-400;
 }
 
 .form-control {
     display: flex;
     width: 100%;
     height: 100%;
-    border: 0;
     color: $gray-700;
+    border: 0;
     &:focus {
-        border: 0!important;
+        border-bottom: solid 1px $gray-500;
     }
     outline: none;
+    background-color: $gray-400;
     background-image: url('~@/assets/icons/search.svg');
     background-repeat: no-repeat;
     background-size: 15px;

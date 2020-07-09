@@ -6,6 +6,10 @@
           <b style="color: #495057">Ofertas de serviços</b>
           <ui-input/>
         </template>
+        <template v-slot:navbar-right>
+          <dropdown title="" icon=""
+          :options="optionsDropdown"/>
+        </template>
       </ui-header>
     </template>
     <template v-slot:sidebar>
@@ -46,10 +50,12 @@ import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
 import { uiCard } from '@/components/cards/index';
 import { uiInput } from '@/components/inputs/index';
+import { dropdown } from '@components/dropdown/index';
 
 export default {
   name: 'dashboard',
   components: {
+    dropdown,
     dashboardTemplate,
     uiMenuSideBar,
     uiHeader,
@@ -59,6 +65,12 @@ export default {
   data() {
     return {
       sidebar: false,
+      optionsDropdown: [
+        'Option 01',
+        'Option 02',
+        'Option 03',
+        'Option 04',
+      ],
     };
   },
   methods: {

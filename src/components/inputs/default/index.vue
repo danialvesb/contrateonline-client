@@ -1,6 +1,6 @@
 <template>
   <div class="input-group">
-    <input type="text" class="form-control"/>
+    <input type="text" class="form-control" placeholder="Pesquisar..."/>
   </div>
 </template>
 
