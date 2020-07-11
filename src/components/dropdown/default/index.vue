@@ -1,12 +1,14 @@
 <template>
   <div class="dropdown">
-    <button class="dropbtn">
-      <font-awesome-icon icon="bell" :style="{ color: '#495057'}"/>
+    <button class="dropbtn" v-on:click=toggleDropdown()>
+      <font-awesome-icon  icon="bell" size="2x" style="filter: invert(80%)
+      sepia(100%) saturate(0%)" />
     </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+    <div class="dropdown-content" v-bind:class="{'dropdown-active': dropdownActive}">
+      <div class="border-style"/>
+      <a href="#">Notification 1</a>
+      <a href="#">Notification 2</a>
+      <a href="#">Notification 3</a>
     </div>
   </div>
 </template>
@@ -29,7 +31,15 @@ export default {
       required: false,
     },
   },
-  components: {
+  data() {
+    return {
+      dropdownActive: false,
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.dropdownActive = !this.dropdownActive;
+    },
   },
 };
 </script>
