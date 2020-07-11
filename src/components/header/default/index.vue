@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <ui-toggle-side-bar v-on:checkboxToggle="checked($event)"/>
-    <div class="breadcrumbs">
+    <div class="navbar-left">
       <slot name="breadcrumbs"/>
     </div>
     <div class="navbar-right">

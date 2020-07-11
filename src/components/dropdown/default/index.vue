@@ -1,26 +1,18 @@
 <template>
-  <div>
-    <ul>
-      <li class="open">
-        <a>Notification</a>
-      </li>
-      <li>
-        <a>Notification</a>
-      </li>
-      <li>
-        <a>Notification</a>
-      </li>
-      <li>
-        <a>Notification</a>
-      </li>
-      <li>
-        <a>Notification</a>
-      </li>
-    </ul>
+  <div class="dropdown">
+    <button class="dropbtn">
+      <font-awesome-icon icon="bell" :style="{ color: '#495057'}"/>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'dropdown',
   props: {
@@ -36,6 +28,8 @@ export default {
       type: Array,
       required: false,
     },
+  },
+  components: {
   },
 };
 </script>

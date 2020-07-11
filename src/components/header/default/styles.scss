@@ -9,15 +9,14 @@
     border-bottom: solid 1px;
     border-color: $gray-300;
 }
-.breadcrumbs {
+.navbar-left {
     display: flex;
     align-items: center;
-    margin: 5px;
+    margin-left: 10px;
+    margin-right: auto;
 }
 
 .navbar-right {
-    margin-top: 35px;
     margin-left: auto;
-    margin-right: 5%;
-    background-color: black;
+    margin-right: 15%;
 }
