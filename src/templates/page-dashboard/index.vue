@@ -1,16 +1,16 @@
 <template>
   <section class="main">
     <section class="header" v-bind:class="{ 'headerLeft':  isActiveSideBar }">
-      <slot name="header">
-      </slot>
+      <slot name="header"/>
+    </section>
+    <section class="breadcrumbs" v-bind:class="{ 'headerLeft':  isActiveSideBar }">
+      <slot name="breadcrumbs"/>
     </section>
     <section class="sidebar">
-      <slot name="sidebar">
-      </slot>
+      <slot name="sidebar"/>
     </section>
     <section class="content" v-bind:class="{ 'contentLeft':  isActiveSideBar }">
-      <slot name="content">
-      </slot>
+      <slot name="content"/>
     </section>
   </section>
 </template>

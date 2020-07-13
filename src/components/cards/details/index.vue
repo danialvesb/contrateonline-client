@@ -1,6 +1,5 @@
 <template>
-  <div class="breadcrumbs">
-    <slot/>
+  <div>
   </div>
 </template>
 
@@ -9,13 +8,14 @@
 export default {
   props: {
   },
-  name: 'breadcrumb',
+  name: 'carddetails',
   methods: {
+
   },
 };
 </script>
 
 <style scoped lang="scss">
   @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/breadcrumbs/default/styles.scss";
+  @import "~@/components/cards/details/styles.scss";
 </style>

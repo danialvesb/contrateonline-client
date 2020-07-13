@@ -1,5 +1,5 @@
-import uibutton from './default/index.vue';
+import uiBreadcrumbs from './default/index.vue';
 
 export {
-  uibutton,
+  uiBreadcrumbs,
 };

@@ -1,44 +1,17 @@
-button {
-    display: inline-block;
-    outline: none;
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition-duration: 0.4s;
-}
-button:hover {
-    background-color: $info;
-    color: white;
-    cursor: pointer;
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: $white;
+    height: 100%;
+    z-index: 999;
+    border-bottom: solid 1px;
+    border-color: $gray-300;
+    padding: 5px;
 }
 
-button:active {
-    background-color: $light;
-}
-
-.color-primary {
-    background-color: $primary;
-}
-.color-secondary {
-    background-color: $secondary;
-}
-.color-success {
-    background-color: $success;
-}
-.color-info {
-    background-color: $cyan;
-}
-.color-warning {
-    background-color: $warning;
-}
-.color-danger {
-    background-color: $danger;
-}
-.color-light {
-    background-color: $light;
-}
-.color-dark {
-    background-color: $dark;
+li {
+    color: $gray-700;
+    margin: 5px;
 }

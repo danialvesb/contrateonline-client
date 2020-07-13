@@ -32,7 +32,7 @@ export default {
     return {
       sidebar: [
         {
-          value: 'Lista de serviços',
+          value: 'Início',
           active: true,
           icon: '',
           path: '/inicio',

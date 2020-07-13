@@ -1,11 +1,10 @@
 <template>
   <div class="header">
-    <ui-toggle-side-bar v-on:checkboxToggle="checked($event)"/>
-    <div class="navbar-left">
-      <slot name="breadcrumbs"/>
-    </div>
-    <div class="navbar-right">
-      <slot name="navbar-right"/>
+    <ui-toggle-side-bar v-on:checkboxToggle="checked($event)" class="toogleSideBar"/>
+    <div class="options">
+      <button v-for="option in options" :key="option.id"
+              @click="pushRouter(option.path)">
+        {{ option.value }}</button>
     </div>
   </div>
 </template>
@@ -18,9 +17,56 @@ export default {
   components: {
     uiToggleSideBar,
   },
+  data() {
+    return {
+      sidebar: false,
+      options: [
+        {
+          id: 1,
+          value: 'Início',
+          active: true,
+          icon: '',
+          path: '/inicio',
+        },
+        {
+          id: 2,
+          value: 'Minhas solicitações',
+          active: false,
+          icon: '',
+          path: '/solicitacoes',
+        },
+        {
+          id: 3,
+          value: 'Conversas',
+          active: false,
+          icon: '',
+          path: '/conversas',
+        },
+        {
+          id: 4,
+          value: 'Ofertar seviço',
+          active: false,
+          icon: '',
+          path: '/servico/ofertar',
+        },
+        {
+          id: 5,
+          value: 'Chamados',
+          active: false,
+          icon: '',
+          path: '/chamados',
+        },
+      ],
+    };
+  },
   methods: {
     checked(event) {
       this.$emit('checkboxToggleHeader', event());
+    },
+    pushRouter(path) {
+      if (this.$route.path !== path) {
+        this.$router.push(path);
+      }
     },
   },
 };
