@@ -5,7 +5,7 @@ import Solicitations from '@/views/solicitations/solicitations.vue';
 import Chat from '@/views/chat/chat.vue';
 import CreateOffer from '@/views/createOffer/createOffer.vue';
 import WorkCalls from '@/views/workCalls/workCalls.vue';
-import CardDetails from '@/components/cards/details/index.vue';
+import DetailsOffer from '@/views/details/details.vue';
 
 Vue.use(VueRouter);
 
@@ -36,9 +36,9 @@ const routes = [
     component: WorkCalls,
   },
   {
-    path: '/oferta/detalhes/{id}',
+    path: '/oferta/visualizar/:id',
     name: 'cardDetails',
-    component: CardDetails,
+    component: DetailsOffer,
   },
   {
     path: '/*',

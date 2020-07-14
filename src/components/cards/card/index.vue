@@ -1,6 +1,6 @@
 <template>
-  <button class="ui-container" v-on:click="openDetails()">
-    <div class="card-header" v-bind:style="{ backgroundColor: colorHeader }">
+  <button class="ui-container" @click="openDetails()">
+    <div class="card-header" :style="{ backgroundColor: colorHeader }">
       {{ title }}
     </div>
     <div class="card-body">
@@ -38,7 +38,7 @@ export default {
   name: 'uicard',
   methods: {
     openDetails() {
-      this.$router.push(`/oferta/detalhes/${this.id}`);
+      this.$router.push(`/oferta/visualizar/${this.id}`);
     },
   },
 };
