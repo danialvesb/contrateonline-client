@@ -37,6 +37,10 @@ export default {
       required: false,
       type: String,
     },
+    hover: {
+      required: false,
+      type: String,
+    },
   },
   data() {
     return {

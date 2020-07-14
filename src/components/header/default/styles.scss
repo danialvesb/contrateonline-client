@@ -7,15 +7,23 @@
         transform: translate(0px);
         transition: all .5s;
     }
+    .navbar-left {
+        transition: all .5s;
+        margin-left: 0!important;
+    }
 }
 @media only screen and (max-width: 721px) {
     .options {
-        transform: translate(-1000px);
+        transform: translate(1000px);
         transition: all .5s;
     }
     .toogleSideBar {
         transform: translate(0px);
         transition: all .5s;
+    }
+    .navbar-left {
+        transition: all .5s;
+        margin-left: 10px!important;
     }
 }
 
@@ -27,10 +35,6 @@
     }
 }
 
-a {
-    color: $gray-700;
-}
-
 .header {
     display: flex;
     flex-direction: row;
@@ -40,15 +44,43 @@ a {
     height: 100%;
     z-index: 999;
     border-bottom: solid 1px;
-    border-color: $gray-300;
+    border-color: $primary;
 }
 .navbar-left {
     display: flex;
     align-items: center;
-    margin-left: 10px;
     margin-right: auto;
 }
 
 .navbar-right {
     margin-left: auto;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    button {
+        outline: none;
+        background-color: transparent;
+        border: 0;
+        height: 100%;
+        color: $gray-700;
+        transition: all .2s;
+        &:hover {
+            background-color: $gray-300;
+            border-bottom: solid 5px;
+            border-color: $primary;
+            transition: all .2s;
+        }
+    }
+}
+
+.animbrand {
+    h4 {
+        color: $primary;
+        cursor: pointer;
+    }
+    margin-right: 30px;
 }

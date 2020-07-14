@@ -1,10 +1,16 @@
 <template>
   <div class="header">
     <ui-toggle-side-bar v-on:checkboxToggle="checked($event)" class="toogleSideBar"/>
-    <div class="options">
+    <div class="animbrand">
+      <h4>Contrate online</h4>
+    </div>
+    <div class="navbar-left options">
       <button v-for="option in options" :key="option.id"
-              @click="pushRouter(option.path)">
-        {{ option.value }}</button>
+        @click="pushRouter(option.path)" >
+        {{ option.value }}
+      <font-awesome-icon :icon="option.icon" style="margin-left: 3px; filter: invert(80%)
+      sepia(100%) saturate(0%)"/>
+      </button>
     </div>
   </div>
 </template>
@@ -25,35 +31,51 @@ export default {
           id: 1,
           value: 'Início',
           active: true,
-          icon: '',
+          icon: 'home',
           path: '/inicio',
         },
         {
           id: 2,
           value: 'Minhas solicitações',
           active: false,
-          icon: '',
+          icon: 'star',
           path: '/solicitacoes',
         },
         {
           id: 3,
           value: 'Conversas',
           active: false,
-          icon: '',
+          icon: 'users',
           path: '/conversas',
         },
         {
           id: 4,
           value: 'Ofertar seviço',
           active: false,
-          icon: '',
+          icon: 'rocket',
           path: '/servico/ofertar',
         },
         {
           id: 5,
           value: 'Chamados',
           active: false,
-          icon: '',
+          icon: 'business-time',
+          path: '/chamados',
+        },
+      ],
+      authOptions: [
+        {
+          id: 1,
+          value: 'Login',
+          active: false,
+          icon: 'sign',
+          path: '/chamados',
+        },
+        {
+          id: 2,
+          value: 'Sair',
+          active: false,
+          icon: 'sign-out-alt',
           path: '/chamados',
         },
       ],
