@@ -1,7 +1,7 @@
 <template>
   <section>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"
-           v-on:change="toggleSideBar()"/>
+           @change="toggleSideBar()" :checked="isActiveSideBar"/>
     <label for="openSidebarMenu" class="sidebarIconToggle" >
       <div class="spinner diagonal part-1"/>
       <div class="spinner horizontal"/>
@@ -17,6 +17,11 @@ export default {
   name: 'uiToggleSideBar',
   methods: {
     ...mapActions(['toggleSideBar']),
+  },
+  computed: {
+    isActiveSideBar() {
+      return this.$store.getters.isActiveSideBar;
+    },
   },
 };
 </script>
