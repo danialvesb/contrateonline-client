@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <ui-toggle-side-bar v-on:checkboxToggle="checked($event)" class="toogleSideBar"/>
+    <ui-toggle-side-bar class="toogleSideBar"/>
     <div class="animbrand">
       <h4>Contrate online</h4>
     </div>
@@ -82,9 +82,6 @@ export default {
     };
   },
   methods: {
-    checked(event) {
-      this.$emit('checkboxToggleHeader', event());
-    },
     pushRouter(path) {
       if (this.$route.path !== path) {
         this.$router.push(path);
