@@ -36,7 +36,7 @@ export default {
     },
     active: {
       require: true,
-      type: String,
+      type: Boolean,
     },
   },
   name: 'uicard',
