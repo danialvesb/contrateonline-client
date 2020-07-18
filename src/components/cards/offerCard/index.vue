@@ -2,7 +2,7 @@
   <div class="card-container">
     <div class="card-header">
       <span class="title-card">
-        <h3>Faça um chamado e espere ser atendidido</h3>
+        <h3>Fazer chamado</h3>
         <small>Verifique as informações de solicite já</small>
       </span>
     </div>

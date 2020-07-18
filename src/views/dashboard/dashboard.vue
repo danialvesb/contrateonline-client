@@ -23,7 +23,8 @@
                 :text="card.text"
                 :colorHeader="card.colorHeader"
                 :id="card.id"
-                class="list-item"/>
+                class="list-item"
+                :active="isActiveSideBar"/>
       </template>
   </dashboard-template>
 </template>
@@ -112,6 +113,11 @@ export default {
     },
     toogleSideBar(event) {
       this.sidebar = event;
+    },
+  },
+  computed: {
+    isActiveSideBar() {
+      return this.$store.getters.isActiveSideBar;
     },
   },
 };
