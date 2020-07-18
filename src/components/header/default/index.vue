@@ -2,7 +2,7 @@
   <div class="header">
     <ui-toggle-side-bar class="toogleSideBar"/>
     <div class="animbrand">
-      <h4>Contrate online</h4>
+      <h4>Contrate <strong>online</strong></h4>
     </div>
     <div class="navbar-left options">
       <button v-for="option in options" :key="option.id"

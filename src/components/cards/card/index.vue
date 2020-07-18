@@ -1,5 +1,5 @@
 <template>
-  <button class="ui-container" @click="openDetails()">
+  <button class="ui-container" @click="openDetails()" :disabled="active">
     <div class="card-header" :style="{ backgroundColor: colorHeader }">
       {{ title }}
     </div>
@@ -31,6 +31,10 @@ export default {
       type: String,
     },
     colorHeader: {
+      require: true,
+      type: String,
+    },
+    active: {
       require: true,
       type: String,
     },

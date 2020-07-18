@@ -59,11 +59,13 @@
 .options {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 65%;
     height: 100%;
     button {
+        padding-left: 10px;
         outline: none;
         cursor: pointer;
+        width: 20%;
         background-color: transparent;
         border: 0;
         height: 100%;
@@ -79,9 +81,12 @@
 }
 
 .animbrand {
+    min-width: 120px;
     h4 {
         color: $primary;
         cursor: pointer;
+        strong {
+            color: $primary;
+        }
     }
-    margin-right: 30px;
 }
