@@ -3,14 +3,18 @@
     <div class="card-header">
       <span class="title-card">
         <h3>Fazer chamado</h3>
-        <small>Verifique as informações de solicite já</small>
       </span>
     </div>
     <div class="card-body">
     </div>
     <div class="card-footer">
       <div class="button-group">
-        <ui-button>Solicitar</ui-button>
+        <ui-button
+          width="50%"
+          height="80%"
+          color="success"
+          :disabled="false"
+          >Solicitar</ui-button>
       </div>
     </div>
   </div>

@@ -1,9 +1,13 @@
 <template>
   <button
-    v-bind:class="[{ 'loading': loadingData}, `color-${color}`]"
+    :class="[
+      { 'loading': loading},
+      `color-${color}`,
+    ]"
     v-bind:style="{fontSize: `${fontSize}rem`, width: width,
+    height: height,
     textAlign: align}"
-    v-on:click="onClick($event)"
+    @click="onClick($event)"
     :disabled="disabled">
     <slot/>
   </button>
@@ -25,6 +29,10 @@ export default {
       required: false,
       type: String,
     },
+    height: {
+      required: false,
+      type: String,
+    },
     disabled: {
       required: false,
       type: Boolean,
@@ -41,11 +49,6 @@ export default {
       required: false,
       type: String,
     },
-  },
-  data() {
-    return {
-      loadingData: this.loading ? this.loading : false,
-    };
   },
   methods: {
     onClick(event) {
