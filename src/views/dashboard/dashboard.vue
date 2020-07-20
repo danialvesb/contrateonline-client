@@ -17,14 +17,17 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
       <template v-slot:content>
-        <uiCard v-for="card in cards"
-                :key="card.id"
-                :title="card.title"
-                :text="card.text"
-                :colorHeader="card.colorHeader"
-                :id="card.id"
-                class="list-item"
-                :active="isActiveSideBar"/>
+        <section v-if="cards">
+          <uiCard
+            v-for="card in cards"
+            :key="card.id"
+            :title="card.title"
+            :text="card.text"
+            :colorHeader="card.colorHeader"
+            :id="card.id"
+            class="list-item"
+            :active="isActiveSideBar"/>
+        </section>
       </template>
   </dashboard-template>
 </template>
@@ -35,6 +38,7 @@ import { uiHeader } from '@/components/header/index';
 import { uiCard } from '@/components/cards/index';
 import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
+import Vue from 'vue';
 
 export default {
   name: 'dashboard',
@@ -59,48 +63,9 @@ export default {
         {
           id: 1,
           title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 2,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 3,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 4,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 5,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 6,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 7,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 8,
-          title: 'Olá',
+          subtitle: 'sub title',
+          district: 'Parque tremendão',
+          rating: 2.2,
           text: 'Olá',
           colorHeader: '#3399FF',
         },
@@ -114,12 +79,20 @@ export default {
     toogleSideBar(event) {
       this.sidebar = event;
     },
+    async getDataCard() {
+      await Vue.prototype.$http.get('dashboard').then((resp) => {
+        console.log(resp);
+      }).catch((err) => {
+        alert(err);
+      });
+    },
   },
   computed: {
     isActiveSideBar() {
       return this.$store.getters.isActiveSideBar;
     },
   },
+
 };
 </script>
 

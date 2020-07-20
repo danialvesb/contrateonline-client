@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import './axios/index';
 
 library.add(faBell, faSearch, faHome,
   faStar, faUsers, faRocket, faBusinessTime, faSign, faSignInAlt);
