@@ -16,19 +16,27 @@
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
-      <template v-slot:content>
-        <section v-if="cards">
-          <uiCard
-            v-for="card in cards"
-            :key="card.id"
-            :title="card.title"
-            :text="card.text"
-            :colorHeader="card.colorHeader"
-            :id="card.id"
-            class="list-item"
-            :active="isActiveSideBar"/>
-        </section>
-      </template>
+    <template v-slot:content v-if="cards">
+      <uiCard
+        v-for="card in cards"
+        :key="card.id"
+        :title="card.title"
+        :text="card.text"
+        :colorHeader="card.colorHeader"
+        :id="card.id"
+        class="list-item"
+        :active="isActiveSideBar"/>
+      <div class="spin">
+        <font-awesome-icon
+          v-if="loading"
+          icon="spinner"
+          spin
+          style="margin-left: 3px; filter: invert(80%) sepia(100%) saturate(0%)"
+          size="3x"
+        />
+      </div>
+    </template>
+
   </dashboard-template>
 </template>
 <script>
@@ -59,17 +67,8 @@ export default {
         'Option 03',
         'Option 04',
       ],
-      cards: [
-        {
-          id: 1,
-          title: 'Olá',
-          subtitle: 'sub title',
-          district: 'Parque tremendão',
-          rating: 2.2,
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-      ],
+      cards: [],
+      loading: true,
     };
   },
   methods: {
@@ -80,10 +79,19 @@ export default {
       this.sidebar = event;
     },
     async getDataCard() {
-      await Vue.prototype.$http.get('dashboard').then((resp) => {
-        console.log(resp);
+      await Vue.prototype.$http.get('services/offers').then((resp) => {
+        this.cards = resp.data.map((item) => ({
+          id: item.id,
+          title: item.description,
+          subtitle: item.service_title,
+          district: `${item.district} / ${item.city}/ ${item.uf}`,
+          text: item.description,
+          rating: item.rating,
+        }));
       }).catch((err) => {
         alert(err);
+      }).finally(() => {
+        this.loading = false;
       });
     },
   },
@@ -92,7 +100,9 @@ export default {
       return this.$store.getters.isActiveSideBar;
     },
   },
-
+  mounted() {
+    this.getDataCard();
+  },
 };
 </script>
 
