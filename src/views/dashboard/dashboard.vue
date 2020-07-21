@@ -16,9 +16,9 @@
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
-    <template v-slot:content v-if="cards">
+    <template v-slot:content v-if="getOffersLocal">
       <uiCard
-        v-for="card in cards"
+        v-for="card in getOffersLocal"
         :key="card.id"
         :title="card.title"
         :text="card.text"
@@ -26,9 +26,8 @@
         :id="card.id"
         class="list-item"
         :active="isActiveSideBar"/>
-      <div class="spin">
+      <div class="spin" v-if="getOffersLocal.length < 1">
         <font-awesome-icon
-          v-if="loading"
           icon="spinner"
           spin
           style="margin-left: 3px; filter: invert(80%) sepia(100%) saturate(0%)"
@@ -47,6 +46,7 @@ import { uiCard } from '@/components/cards/index';
 import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
 import Vue from 'vue';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'dashboard',
@@ -67,11 +67,10 @@ export default {
         'Option 03',
         'Option 04',
       ],
-      cards: [],
-      loading: true,
     };
   },
   methods: {
+    ...mapActions(['loadOffers']),
     onClick(event) {
       event();
     },
@@ -80,7 +79,7 @@ export default {
     },
     async getDataCard() {
       await Vue.prototype.$http.get('services/offers').then((resp) => {
-        this.cards = resp.data.map((item) => ({
+        const offersList = resp.data.map((item) => ({
           id: item.id,
           title: item.description,
           subtitle: item.service_title,
@@ -88,16 +87,18 @@ export default {
           text: item.description,
           rating: item.rating,
         }));
+        this.loadOffers(offersList);
       }).catch((err) => {
         alert(err);
-      }).finally(() => {
-        this.loading = false;
       });
     },
   },
   computed: {
     isActiveSideBar() {
       return this.$store.getters.isActiveSideBar;
+    },
+    getOffersLocal() {
+      return this.$store.getters.getOffers;
     },
   },
   mounted() {
