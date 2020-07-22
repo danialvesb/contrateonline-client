@@ -16,16 +16,19 @@
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
-    <template v-slot:content v-if="getOffersLocal">
-      <uiCard
-        v-for="card in getOffersLocal"
-        :key="card.id"
-        :title="card.title"
-        :text="card.text"
-        :colorHeader="card.colorHeader"
-        :id="card.id"
-        class="list-item"
-        :active="isActiveSideBar"/>
+    <template
+      v-slot:content v-if="getOffersLocal">
+      <transition-group name="fade" tag="cards">
+        <uiCard
+          v-for="card in getOffersLocal"
+          :key="card.id"
+          :title="card.title"
+          :text="card.text"
+          :colorHeader="card.colorHeader"
+          :id="card.id"
+          class="list-item"
+          :active="isActiveSideBar"/>
+      </transition-group>
       <div class="spin" v-if="getOffersLocal.length < 1">
         <font-awesome-icon
           icon="spinner"
@@ -33,10 +36,9 @@
           style="margin-left: 3px; filter: invert(80%) sepia(100%) saturate(0%)"
           size="3x"
         />
-      </div>
+     </div>
     </template>
-
-  </dashboard-template>
+</dashboard-template>
 </template>
 <script>
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
@@ -110,4 +112,11 @@ export default {
 <style scoped lang="scss">
   @import "~@/assets/scss/style.scss";
   @import "~@/views/dashboard/styles.scss";
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+    opacity: 0;
+  }
 </style>
