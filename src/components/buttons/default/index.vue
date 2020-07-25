@@ -4,7 +4,7 @@
       { 'loading': loading},
       `color-${color}`,
     ]"
-    :style="{fontSize: `${fontSize}rem`, width: width,
+    :style="{fontSize: `${fontSize}rem`,
     height: height,
     textAlign: align}"
     @click="onClick($event)"
@@ -42,10 +42,6 @@ export default {
       type: Boolean,
     },
     align: {
-      required: false,
-      type: String,
-    },
-    hover: {
       required: false,
       type: String,
     },

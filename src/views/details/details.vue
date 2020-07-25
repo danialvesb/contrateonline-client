@@ -17,7 +17,7 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <uiOfferCard/>
+      <ui-offer-card-details/>
     </template>
   </dashboard-template>
 </template>
@@ -27,7 +27,7 @@ import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
 import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
-import { uiOfferCard } from '@/components/cards/index';
+import { uiOfferCardDetails } from '@/components/cards/index';
 
 export default {
   name: 'dashboard',
@@ -37,7 +37,7 @@ export default {
     uiMenuSideBar,
     uiHeader,
     uiBreadcrumbs,
-    uiOfferCard,
+    uiOfferCardDetails,
   },
   data() {
     return {

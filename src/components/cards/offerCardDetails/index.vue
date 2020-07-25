@@ -10,7 +10,6 @@
     <div class="card-footer">
       <div class="button-group">
         <ui-button
-          width="50%"
           height="80%"
           color="success"
           :disabled="false"
@@ -38,6 +37,6 @@ export default {
 
 <style scoped lang="scss">
   @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/cards/offerCard/styles.scss";
+  @import "~@/components/cards/offerCardDetails/styles.scss";
 
 </style>
