@@ -18,17 +18,7 @@
     </template>
     <template
       v-slot:content v-if="getOffersLocal">
-      <transition-group name="fade" tag="cards">
-        <uiCard
-          v-for="card in getOffersLocal"
-          :key="card.id"
-          :title="card.title"
-          :text="card.text"
-          :colorHeader="card.colorHeader"
-          :id="card.id"
-          class="list-item"
-          :active="isActiveSideBar"/>
-      </transition-group>
+      <ui-cards/>
       <div class="spin" v-if="getOffersLocal.length < 1">
         <font-awesome-icon
           icon="spinner"
@@ -44,11 +34,9 @@
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
 import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
-import { uiCard } from '@/components/cards/index';
 import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
-import Vue from 'vue';
-import { mapActions } from 'vuex';
+import { uiCards } from '@/components/cards/index';
 
 export default {
   name: 'dashboard',
@@ -57,8 +45,8 @@ export default {
     dashboardTemplate,
     uiMenuSideBar,
     uiHeader,
-    uiCard,
     uiBreadcrumbs,
+    uiCards,
   },
   data() {
     return {
@@ -72,39 +60,17 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['loadOffers']),
     onClick(event) {
       event();
     },
     toogleSideBar(event) {
       this.sidebar = event;
     },
-    async getDataCard() {
-      await Vue.prototype.$http.get('services/offers').then((resp) => {
-        const offersList = resp.data.map((item) => ({
-          id: item.id,
-          title: item.description,
-          subtitle: item.service_title,
-          district: `${item.district} / ${item.city}/ ${item.uf}`,
-          text: item.description,
-          rating: item.rating,
-        }));
-        this.loadOffers(offersList);
-      }).catch((err) => {
-        alert(err);
-      });
-    },
   },
   computed: {
-    isActiveSideBar() {
-      return this.$store.getters.isActiveSideBar;
-    },
     getOffersLocal() {
       return this.$store.getters.getOffers;
     },
-  },
-  mounted() {
-    this.getDataCard();
   },
 };
 </script>
