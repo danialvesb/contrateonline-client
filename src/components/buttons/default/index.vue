@@ -4,7 +4,7 @@
       { 'loading': loading},
       `color-${color}`,
     ]"
-    v-bind:style="{fontSize: `${fontSize}rem`, width: width,
+    :style="{fontSize: `${fontSize}rem`, width: width,
     height: height,
     textAlign: align}"
     @click="onClick($event)"

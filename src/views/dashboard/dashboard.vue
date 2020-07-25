@@ -16,25 +16,27 @@
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
-      <template v-slot:content>
-        <uiCard v-for="card in cards"
-                :key="card.id"
-                :title="card.title"
-                :text="card.text"
-                :colorHeader="card.colorHeader"
-                :id="card.id"
-                class="list-item"
-                :active="isActiveSideBar"/>
-      </template>
-  </dashboard-template>
+    <template
+      v-slot:content v-if="getOffersLocal">
+      <ui-cards/>
+      <div class="spin" v-if="getOffersLocal.length < 1">
+        <font-awesome-icon
+          icon="spinner"
+          spin
+          style="margin-left: 3px; filter: invert(80%) sepia(100%) saturate(0%)"
+          size="3x"
+        />
+     </div>
+    </template>
+</dashboard-template>
 </template>
 <script>
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
 import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
-import { uiCard } from '@/components/cards/index';
 import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
+import { uiCards } from '@/components/cards/index';
 
 export default {
   name: 'dashboard',
@@ -43,8 +45,8 @@ export default {
     dashboardTemplate,
     uiMenuSideBar,
     uiHeader,
-    uiCard,
     uiBreadcrumbs,
+    uiCards,
   },
   data() {
     return {
@@ -54,56 +56,6 @@ export default {
         'Option 02',
         'Option 03',
         'Option 04',
-      ],
-      cards: [
-        {
-          id: 1,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 2,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 3,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 4,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 5,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 6,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 7,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
-        {
-          id: 8,
-          title: 'Olá',
-          text: 'Olá',
-          colorHeader: '#3399FF',
-        },
       ],
     };
   },
@@ -116,8 +68,8 @@ export default {
     },
   },
   computed: {
-    isActiveSideBar() {
-      return this.$store.getters.isActiveSideBar;
+    getOffersLocal() {
+      return this.$store.getters.getOffers;
     },
   },
 };
@@ -126,4 +78,11 @@ export default {
 <style scoped lang="scss">
   @import "~@/assets/scss/style.scss";
   @import "~@/views/dashboard/styles.scss";
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+    opacity: 0;
+  }
 </style>

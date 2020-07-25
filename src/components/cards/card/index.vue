@@ -1,42 +1,28 @@
 <template>
   <button class="ui-container" @click="openDetails()" :disabled="active">
-    <div class="card-header" :style="{ backgroundColor: colorHeader }">
-      {{ title }}
+    <div class="card-header">
+      <p>{{ data.title }}</p>
     </div>
     <div class="card-body">
-      {{ text }}
+      <p>{{ data.subtitle }}</p>
+      <p>{{ data.amount }}</p>
     </div>
-    <separator width="80%" color="#dee2e6"/>
     <div class="card-footer">
+      <p>{{ data.district }}</p>
     </div>
   </button>
 </template>
 
 <script>
-import Separator from '@components/separator';
-
 export default {
-  components: { Separator },
   props: {
-    id: {
+    data: {
       require: true,
-      type: Number,
-    },
-    title: {
-      require: true,
-      type: String,
-    },
-    text: {
-      require: true,
-      type: String,
-    },
-    colorHeader: {
-      require: true,
-      type: String,
+      type: Object,
     },
     active: {
       require: true,
-      type: String,
+      type: Boolean,
     },
   },
   name: 'uicard',

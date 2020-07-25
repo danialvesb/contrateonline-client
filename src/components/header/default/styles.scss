@@ -2,6 +2,7 @@
     .toogleSideBar {
         transform: translate(-1000px);
         transition: all .5s;
+        display: none;
     }
     .options {
         transform: translate(0px);
@@ -12,6 +13,29 @@
         margin-left: 0!important;
     }
 }
+
+@media only screen and (max-width: 1162px) {
+    .options {
+        width: 80%!important;
+    }
+}
+
+@media only screen and (max-width: 935px) {
+    .options {
+        width: 100%!important;
+        button {
+            padding: 0;
+        }
+    }
+    .navbar-left {
+        width: 100%;
+    }
+
+    .animbrand {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 721px) {
     .options {
         transform: translate(1000px);
@@ -62,26 +86,27 @@
     width: 65%;
     height: 100%;
     button {
-        padding-left: 10px;
         outline: none;
         cursor: pointer;
         width: 20%;
         background-color: transparent;
         border: 0;
+        padding-top: 0;
         height: 100%;
         color: $gray-700;
-        transition: all .2s;
         &:hover {
+            padding-top: 5px;
             background-color: $gray-300;
             border-bottom: solid 5px;
             border-color: $primary;
-            transition: all .2s;
+            transition: all .1s;
         }
     }
 }
 
 .animbrand {
     min-width: 120px;
+    margin-left: 5px;
     h4 {
         color: $primary;
         cursor: pointer;
