@@ -58,6 +58,7 @@
 
     .item-card-body {
         margin-top: 5px;
+        flex-wrap: wrap;
     }
 
     .price {
@@ -68,7 +69,7 @@
     }
     .description {
         color: $primary-hover;
-        height: 20%;
+        min-height: 20%;
     }
     .title {
         background-color: #1f62a8;

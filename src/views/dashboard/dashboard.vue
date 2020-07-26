@@ -78,11 +78,4 @@ export default {
 <style scoped lang="scss">
   @import "~@/assets/scss/style.scss";
   @import "~@/views/dashboard/styles.scss";
-
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 1s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
-    opacity: 0;
-  }
 </style>
