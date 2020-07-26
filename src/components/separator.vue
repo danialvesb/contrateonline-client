@@ -1,7 +1,6 @@
 <template>
   <div style="width: 100%; display: flex; justify-content: center">
-    <div
-      v-bind:style="{width: width, borderBottom: `solid 1px ${color}` }"/>
+    <div :style="{width: width, borderBottom: 'solid 1px gray' }"/>
   </div>
 </template>
 
@@ -13,13 +12,12 @@ export default {
       type: String,
       require: false,
     },
-    color: {
-      type: String,
-      require: false,
-    },
   },
 };
 </script>
 
 <style scoped lang="scss">
+  @import "~@/assets/scss/_variables.scss";
+  @import "~@/components/cards/offerCardDetails/styles.scss";
+
 </style>

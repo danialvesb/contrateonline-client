@@ -28,7 +28,7 @@ export default {
   name: 'uicard',
   methods: {
     openDetails() {
-      this.$router.push(`/oferta/visualizar/${this.id}`);
+      this.$router.push(`/oferta/visualizar/${this.data.id}`);
     },
   },
 };
