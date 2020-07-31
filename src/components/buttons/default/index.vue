@@ -4,9 +4,9 @@
       { 'loading': loading},
       `color-${color}`,
     ]"
-    :style="{fontSize: `${fontSize}rem`,
+    :style="[{fontSize: `${fontSize}rem`,
     height: height,
-    textAlign: align}"
+    textAlign: align}]"
     @click="onClick($event)"
     :disabled="disabled">
     <slot/>
@@ -49,7 +49,7 @@ export default {
   methods: {
     onClick(event) {
       event.preventDefault();
-      this.$emit('evtButton', () => event);
+      this.$emit('click', () => event);
     },
   },
 };

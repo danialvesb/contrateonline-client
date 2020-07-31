@@ -1,5 +1,5 @@
 <template>
-  <div id="sidebarMenu" v-bind:class="{ 'sidebarOpen' :  isActiveSideBar }">
+  <div id="sidebarMenu" :class="{ 'sidebarOpen' :  isActiveSideBar }">
     <ul class="sidebarMenuInner">
       <li>
         Daniel Alves <span>Cliente</span>
@@ -10,8 +10,9 @@
           fontSize="1.1"
           align="left"
           width="100%"
-          v-on:evtButton="onClick(index, item)"
-          :color="item.active ? 'success': 'default'">{{ item.value }}
+          @click="onClick(index, item)"
+          :color="item.active ? 'success': 'default'">
+          {{ item.value }}
         </uiButton>
       </li>
     </ul>
@@ -33,7 +34,7 @@ export default {
       sidebar: [
         {
           value: 'Início',
-          active: true,
+          active: false,
           icon: '',
           path: '/inicio',
         },
@@ -71,9 +72,10 @@ export default {
         this.$router.push(path);
       }
     },
-    alterOptionSideBar(indexPara = null, path = null) {
+    alterOptionSideBar(indexPara, path) {
+      console.log('tes');
+      // Estpa sendo chamado duas vezes, pois mudar o componente ele chama de novo
       const indexPath = this.sidebar.findIndex((element) => element.path === path);
-
       if (indexPara) {
         this.sidebar.map((item, index) => ({
           value: item.value,
