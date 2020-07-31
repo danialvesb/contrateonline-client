@@ -15,8 +15,6 @@ import Vue from 'vue';
 import { mapActions } from 'vuex';
 
 export default {
-  props: {
-  },
   name: 'uicards',
   components: {
     uiCard,
@@ -48,7 +46,7 @@ export default {
       return this.$store.getters.getOffers;
     },
   },
-  mounted() {
+  beforeMount() {
     this.getDataCard();
   },
 };

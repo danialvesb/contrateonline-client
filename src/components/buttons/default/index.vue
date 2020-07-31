@@ -4,9 +4,9 @@
       { 'loading': loading},
       `color-${color}`,
     ]"
-    :style="{fontSize: `${fontSize}rem`, width: width,
+    :style="[{fontSize: `${fontSize}rem`,
     height: height,
-    textAlign: align}"
+    textAlign: align}]"
     @click="onClick($event)"
     :disabled="disabled">
     <slot/>
@@ -45,15 +45,11 @@ export default {
       required: false,
       type: String,
     },
-    hover: {
-      required: false,
-      type: String,
-    },
   },
   methods: {
     onClick(event) {
       event.preventDefault();
-      this.$emit('evtButton', () => event);
+      this.$emit('click', () => event);
     },
   },
 };

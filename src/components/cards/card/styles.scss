@@ -19,6 +19,15 @@ button {
     border: 0;
 }
 
+button:hover {
+    .card-header {
+        background-color: $primary-hover;
+    }
+    .card-footer {
+        background-color: $primary-hover;
+    }
+}
+
 .ui-container {
     display: flex;
     flex-direction: column;

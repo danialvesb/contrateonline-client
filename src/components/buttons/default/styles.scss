@@ -5,6 +5,8 @@ button {
     border: none;
     border-radius: 3px;
     padding: 5px;
+    width: 100%;
+    cursor: pointer;
 }
 .loading {
     background: url('../../../assets/imgs/loading.svg') no-repeat center;
@@ -28,9 +30,7 @@ button:active {
 }
 .color-success {
     background-color: $success;
-}
-.color-success:hover {
-    background-color: $success!important;
+    transition: all 400ms;
 }
 
 .color-info {
@@ -51,4 +51,9 @@ button:active {
 
 .color-default {
     background-color: transparent;
+    transition: all 400ms;
+}
+
+.color-success:hover {
+    background-color: $success-hover;
 }
