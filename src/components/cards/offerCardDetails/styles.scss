@@ -15,6 +15,37 @@
     }
 }
 
+@media only screen and ( max-width:  1205px) {
+    .card-container {
+        width: 95%!important;
+        height: 2000px;
+    }
+}
+
+@media only screen and ( max-width:  1017px) {
+    .card-container {
+        height: 1300px;
+    }
+    .content {
+        flex-direction: column!important;
+        align-items: center;
+        background-color: #1f62a8;
+        height: 800px!important;
+        overflow: scroll;
+        transition: all .5s;
+    }
+    .content-user {
+        width: 50%!important;
+        transition: all .5s;
+    }
+
+    .content-table {
+        width: 95%!important;
+        transition: all .5s;
+    }
+}
+
+
 .card-container {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -37,6 +68,8 @@
     height: 100%;
     justify-content: space-around;
     overflow-y: hidden;
+    margin-top: 20px;
+    transition: all .5s;
     .content-user {
         display: flex;
         flex-direction: column;
@@ -48,6 +81,7 @@
         margin-left: 20px;
         align-items: center;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+        transition: all .5s;
         .element-profile {
             display: flex;
             justify-content: center;
@@ -83,7 +117,6 @@
         transition: all .5s;
         #details {
             background-color: white;
-            border: 0;
             border-radius: 4px;
             width: 100%;
             tr td {
@@ -146,8 +179,6 @@
     height: 57px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    position: relative;
-    top: -20px;
     background-color: $primary;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transition: all .5s;
@@ -162,17 +193,6 @@
 
 .card-body {
     width: 100%;
-    height: 567px;
-}
-
-.card-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 10%;
-    border-top: solid 1px;
-    border-color: $gray-500;
 }
 
 .button-group {
