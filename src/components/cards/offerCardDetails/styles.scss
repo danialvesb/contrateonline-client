@@ -20,21 +20,115 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $white;
+    background-color: $offer-container;
     width: 80%;
     min-width: 300px;
-    min-height: 300px;
-    max-height: 80%;
+    min-height: 979px;
     border-radius: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transition: all .5s;
 }
 
+.content {
+    display: flex;
+    width:  100%;
+    height: 100%;
+    justify-content: space-around;
+    overflow-y: hidden;
+    .content-user {
+        display: flex;
+        flex-direction: column;
+        background-color: #20c997;
+        width: 20%;
+        height: 140px;
+        padding-top: 3px;
+        border-radius: 10px;
+        margin-left: 20px;
+        align-items: center;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+        .element-profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            border-radius: 100px;
+            background-color: $gray-700;
+            img {
+                width: 55%;
+                height: 55%;
+            }
+        }
+        span {
+            p {
+                text-align: center;
+                margin: 0;
+            }
+            small {
+                position: relative;
+                top: -5px;
+                text-align: center;
+                font-size: .8rem;
+                color: $gray-700;
+            }
+        }
+    }
+
+    .content-table {
+        width: 70%;
+        height: 480px;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: all .5s;
+
+        #details {
+            background-color: white;
+            border: 0;
+            border-radius: 4px;
+            width: 100%;
+            tr td {
+                color: $gray-700;
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                .text-description {
+                    color: $gray-700;
+                    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                    padding: 2px;
+                    border: 0;
+                    height: 300px;
+                    width: 100%;
+                    overflow-y: scroll;
+
+                }
+            }
+        }
+
+        #details td, #details th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #details tr:nth-child(even){background-color: #f2f2f2;}
+
+        #details tr:hover {background-color: #ddd;}
+    }
+}
+
+.content-gallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #20c997;
+    width: 100%;
+    height: 384px;
+}
+
 .card-header {
     display: flex;
     align-items: center;
-    width: 80%;
-    border-radius: 5px;
+    width: 100%;
+    height: 57px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     position: relative;
     top: -20px;
     background-color: $primary;
@@ -50,37 +144,8 @@
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    height: 80%;
-    padding: 5px;
-
-    .item-card-body {
-        margin-top: 5px;
-        flex-wrap: wrap;
-    }
-
-    .price {
-        background-color: #6f42c1;
-    }
-    .rating {
-        background-color: #ffc107;
-    }
-    .description {
-        color: $primary-hover;
-        min-height: 20%;
-    }
-    .title {
-        background-color: #1f62a8;
-    }
-    .location {
-        background-color: #7d8287;
-    }
-    .carousel {
-        height: 100px;
-        background-color: #7d8287;
-    }
+    height: 567px;
 }
 
 .card-footer {
@@ -95,10 +160,10 @@
 
 .button-group {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 35%;
-    height: 80%;
-    margin-left: auto;
+    width: 100%;
+    height: 57px;
+    background-color: $primary;
     transition: all .5s;
 }

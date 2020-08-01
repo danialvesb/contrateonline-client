@@ -2,40 +2,117 @@
   <div class="card-container">
     <div class="card-header">
       <span class="title-card">
-        <h3>Detalhes da oferta</h3>
+        <a>Detalhes da oferta</a>
       </span>
     </div>
     <div class="card-body">
-      <div class="title item-card-body">
-        <strong>Conserto de computadores</strong>5
-      </div>
-      <div class="rating item-card-body">
-        <strong>Nota geral: </strong>5
-      </div>
-      <div class="price item-card-body">
-        <strong>Valor cobrado: </strong>R$ 200,00
-      </div>
-      <div class="description item-card-body">
-        Descrição da oferta descriçãoDescrição da oferta descrição Descrição da oferta descrição
-        Descrição da oferta descriçãoDescrição da oferta descrição Descrição da oferta descrição
-        Descrição da oferta descriçãoDescrição da oferta descrição Descrição da oferta descrição
-      </div>
-      <div class="location item-card-body">
-        Goiânia/GO parque tremendão
-      </div>
-      <div class="carousel item-card-body">
-        Carousel
+      <div class="content">
+        <div class="content-user">
+          <div class="element-profile">
+            <img :src="require('@/assets/imgs/user-silhouette.svg')">
+          </div>
+          <div class="user-name">
+          <span>
+            <p>Jane</p>
+          </span>
+            <span>
+            <small>Pessoa física</small>
+          </span>
+          </div>
+          <div class="user-rating">
+            <font-awesome-icon icon="star"/>
+            <font-awesome-icon icon="star"/>
+            <font-awesome-icon icon="star"/>
+            <font-awesome-icon icon="star"/>
+            <font-awesome-icon icon="star"/>
+          </div>
+        </div>
+        <div class="content-table">
+          <table id="details">
+            <tr>
+              <td>Típo de seviço:</td>
+              <td>Conserto de computadores</td>
+            </tr>
+            <tr>
+              <td>Valor cobrado</td>
+              <td>R$ 200,00</td>
+            </tr>
+            <tr>
+              <td>Localização</td>
+              <td>Goiânia/GO parque tremendão</td>
+            </tr>
+            <tr>
+              <td>Descrição </td>
+              <td>
+                <div class="text-description">
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+                  dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
+
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="card-footer">
-      <div class="button-group">
-        <ui-button
-          height="80%"
-          color="success"
-          :disabled="false">
-          Solicitar
-        </ui-button>
-      </div>
+    <div class="button-group">
+      <ui-button
+        height="80%"
+        width="234px"
+        color="warning"
+        margin="3px"
+        :disabled="false">
+        Voltar
+      </ui-button>
+      <ui-button
+        height="80%"
+        width="234px"
+        margin="3px"
+        color="success"
+        :disabled="false">
+        Solicitar
+      </ui-button>
+    </div>
+    <div class="content-gallery">
+
     </div>
   </div>
 </template>
