@@ -2,7 +2,7 @@
   <div class="header">
     <ui-toggle-side-bar class="toogleSideBar"/>
     <div class="animbrand">
-      <h4>Contrate <strong>online</strong></h4>
+      <img width="150" height="100" :src="require('@/assets/animbrand/default-monochrome.svg')">
     </div>
     <div class="navbar-left options">
       <button v-for="option in options" :key="option.id"
