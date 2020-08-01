@@ -112,7 +112,10 @@
       </ui-button>
     </div>
     <div class="content-gallery">
-
+      <img class="image-item" :src="require('@/assets/imgs/img1.jpg')">
+      <img class="image-item" :src="require('@/assets/imgs/img2.jpg')">
+      <img class="image-item" :src="require('@/assets/imgs/img3.jpg')">
+      <img class="image-item" :src="require('@/assets/imgs/img4.jpg')">
     </div>
   </div>
 </template>
