@@ -120,9 +120,9 @@
         width: 70%;
         height: 550px;
         transition: all .5s;
+        margin-bottom: 20px;
 
         #details {
-            background-color: white;
             border-radius: 4px;
             width: 100%;
 
@@ -131,9 +131,11 @@
                 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
                 .text-description {
+                    text-align: center;
                     color: $gray-700;
                     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-                    padding: 2px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                     border: 0;
                     min-height: 100px;
                     max-height: 350px;
@@ -157,7 +159,8 @@
             transition: all .5s;
             background-color: #ddd;
         }
-        overflow-x: scroll;
+
+        overflow-x: auto;
     }
 }
 

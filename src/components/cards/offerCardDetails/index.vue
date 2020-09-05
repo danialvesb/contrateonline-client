@@ -96,7 +96,7 @@
       <ui-button
         height="80%"
         width="234px"
-        color="warning"
+        color="primary"
         margin="3px"
         @click="back"
         :disabled="false">
