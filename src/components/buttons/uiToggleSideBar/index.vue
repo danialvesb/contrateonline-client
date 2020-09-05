@@ -2,7 +2,7 @@
   <section>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu"
            @change="toggleSideBar()" :checked="isActiveSideBar"/>
-    <label for="openSidebarMenu" class="sidebarIconToggle" >
+    <label for="openSidebarMenu" class="sidebarIconToggle">
       <div class="spinner diagonal part-1"/>
       <div class="spinner horizontal"/>
       <div class="spinner diagonal part-2"/>
@@ -27,6 +27,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/buttons/uiToggleSideBar/styles.scss";
+@import "~@/assets/scss/_variables.scss";
+@import "~@/components/buttons/uiToggleSideBar/styles.scss";
 </style>

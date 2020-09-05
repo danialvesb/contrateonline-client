@@ -44,16 +44,16 @@ $dark: $gray-700 !default;
 // This table defines the theme colors (variant names)
 $theme-colors: () !default;
 $theme-colors: map-merge(
-                (
-                        'primary': $primary,
-                        'secondary': $secondary,
-                        'success': $success,
-                        'info': $info,
-                        'warning': $warning,
-                        'danger': $danger,
-                        'light': $light,
-                        'dark': $dark,
-                        'blue': #303C54,
-                ),
-                $theme-colors
+    (
+        'primary': $primary,
+        'secondary': $secondary,
+        'success': $success,
+        'info': $info,
+        'warning': $warning,
+        'danger': $danger,
+        'light': $light,
+        'dark': $dark,
+        'blue': #303C54,
+    ),
+    $theme-colors
 );

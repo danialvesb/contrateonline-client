@@ -1,10 +1,10 @@
 <template>
   <dashboard-template>
     <template v-slot:header>
-      <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)">
+      <ui-header>
         <template v-slot:navbar-right>
           <dropdown title="" icon=""
-          :options="optionsDropdown"/>
+                    :options="optionsDropdown"/>
         </template>
       </ui-header>
     </template>
@@ -26,9 +26,9 @@
           style="margin-left: 3px; filter: invert(80%) sepia(100%) saturate(0%)"
           size="3x"
         />
-     </div>
+      </div>
     </template>
-</dashboard-template>
+  </dashboard-template>
 </template>
 <script>
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
@@ -76,6 +76,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/scss/style.scss";
-  @import "~@/views/dashboard/styles.scss";
+@import "~@/assets/scss/style.scss";
+@import "~@/views/dashboard/styles.scss";
 </style>

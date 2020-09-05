@@ -127,11 +127,7 @@ export default {
   components: {
     uiButton,
   },
-  props: {
-  },
-  name: 'uiOfferCard',
-  methods: {
-  },
+  name: 'uiOfferCardDetails',
 };
 </script>
 

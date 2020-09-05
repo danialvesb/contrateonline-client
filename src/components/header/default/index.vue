@@ -1,14 +1,14 @@
 <template>
   <div class="header">
-    <ui-toggle-side-bar class="toogleSideBar"/>
+    <ui-toggle-side-bar class="positionFixed toogleSideBar"/>
     <div class="animbrand">
-      <img width="150" height="100" :src="require('@/assets/animbrand/default-monochrome.svg')">
+      <img width="150" height="100" :src="require('@/assets/animbrand/default-monochrome.svg')"/>
     </div>
     <div class="navbar-left options">
       <button v-for="option in options" :key="option.id"
-        @click="pushRouter(option.path)" >
+              @click="pushRouter(option.path)">
         {{ option.value }}
-      <font-awesome-icon :icon="option.icon" style="margin-left: 3px; filter: invert(80%)
+        <font-awesome-icon :icon="option.icon" style="margin-left: 3px; filter: invert(80%)
       sepia(100%) saturate(0%)"/>
       </button>
     </div>
@@ -92,6 +92,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/scss/style.scss";
-  @import "~@/components/header/default/styles.scss";
+@import "~@/assets/scss/style.scss";
+@import "~@/components/header/default/styles.scss";
 </style>
