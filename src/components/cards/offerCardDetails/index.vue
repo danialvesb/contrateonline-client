@@ -42,7 +42,7 @@
               <td>Goiânia/GO parque tremendão</td>
             </tr>
             <tr>
-              <td>Descrição </td>
+              <td>Descrição</td>
               <td>
                 <div class="text-description">
                   dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
@@ -85,7 +85,6 @@
                   dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
                   dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
                   dadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadadsdadads
-
                 </div>
               </td>
             </tr>
@@ -99,6 +98,7 @@
         width="234px"
         color="warning"
         margin="3px"
+        @click="back"
         :disabled="false">
         Voltar
       </ui-button>
@@ -128,10 +128,15 @@ export default {
     uiButton,
   },
   name: 'uiOfferCardDetails',
+  methods: {
+    back() {
+      this.$router.back();
+    },
+  },
 };
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/cards/offerCardDetails/styles.scss";
+@import "~@/assets/scss/_variables.scss";
+@import "~@/components/cards/offerCardDetails/styles.scss";
 </style>
