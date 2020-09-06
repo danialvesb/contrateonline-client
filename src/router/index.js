@@ -6,6 +6,7 @@ import Chat from '@/views/chat/chat.vue';
 import CreateOffer from '@/views/createOffer/createOffer.vue';
 import WorkCalls from '@/views/workCalls/workCalls.vue';
 import DetailsOffer from '@/views/details/details.vue';
+import detailsSolicitation from '@/views/detailsSolicitation/detailsSolicitation.vue';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/oferta/visualizar/:id',
     name: 'cardDetails',
     component: DetailsOffer,
+  },
+  {
+    path: '/solicitacao/visualizar/:id',
+    name: 'cardSolicitationDetails',
+    component: detailsSolicitation,
   },
   {
     path: '/*',

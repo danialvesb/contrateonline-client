@@ -1,0 +1,38 @@
+.container {
+    margin-top: 10px;
+    width: 80%;
+    height: 400px;
+    background-color: $primary;
+    min-width: 300px;
+    transition: 0.4s ease-in-out;
+}
+
+.header-section {
+    width: 100%;
+    height: 10%;
+    background-color: $white;
+    transition: 0.4s ease-in-out;
+}
+
+.main-section {
+    width: 100%;
+    height: 80%;
+    background-color: $primary-hover;
+    transition: 0.4s ease-in-out;
+}
+
+.footer-section {
+    width: 100%;
+    height: 10%;
+    background-color: $primary;
+    transition: 0.4s ease-in-out;
+}
+
+.container-disabled {
+    opacity: .3;
+    transition: 0.4s ease-in-out;
+
+    .header-section {
+        transition: 0.4s ease-in-out;
+    }
+}
