@@ -18,6 +18,4 @@ export default {
 
 <style scoped lang="scss">
   @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/cards/offerCardDetails/styles.scss";
-
 </style>

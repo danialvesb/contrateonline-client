@@ -91,6 +91,7 @@ button:hover {
 }
 
 .button-inactive:hover {
+    cursor: default;
     .card-header {
         background-color: $primary;
     }
