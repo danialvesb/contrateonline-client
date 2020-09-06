@@ -6,6 +6,8 @@
     ]"
     :style="[{fontSize: `${fontSize}rem`,
     height: height,
+    width: width,
+    margin: margin,
     textAlign: align}]"
     @click="onClick($event)"
     :disabled="disabled">
@@ -42,6 +44,10 @@ export default {
       type: Boolean,
     },
     align: {
+      required: false,
+      type: String,
+    },
+    margin: {
       required: false,
       type: String,
     },

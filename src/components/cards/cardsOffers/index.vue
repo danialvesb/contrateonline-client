@@ -1,6 +1,7 @@
 <template>
   <transition-group name="fade" tag="div" class="cards">
     <uiCard
+      :onClick="() => onClick(card.id)"
       v-for="card in getOffersLocal"
       :key="card.id"
       :data="card"
@@ -37,6 +38,9 @@ export default {
         alert(err);
       });
     },
+    onClick(id) {
+      this.$router.push(`/oferta/visualizar/${id}`);
+    },
   },
   computed: {
     isActiveSideBar() {
@@ -54,5 +58,5 @@ export default {
 
 <style scoped lang="scss">
   @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/cards/cards/styles.scss";
+  @import "~@/components/cards/cardsOffers/styles.scss";
 </style>

@@ -11,6 +11,7 @@ $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
+$offer-container: #122833 !default;
 
 // Base colors definitions
 $blue: rgb(0, 123, 255) !default;
@@ -35,6 +36,7 @@ $success: $green !default;
 $success-hover: $green-hover!default;
 $info: $cyan !default;
 $warning: $yellow !default;
+$warning-hover: #d09f0f !default;
 $danger: $red !default;
 $light: $gray-100 !default;
 $dark: $gray-700 !default;
@@ -42,16 +44,16 @@ $dark: $gray-700 !default;
 // This table defines the theme colors (variant names)
 $theme-colors: () !default;
 $theme-colors: map-merge(
-                (
-                        'primary': $primary,
-                        'secondary': $secondary,
-                        'success': $success,
-                        'info': $info,
-                        'warning': $warning,
-                        'danger': $danger,
-                        'light': $light,
-                        'dark': $dark,
-                        'blue': #303C54,
-                ),
-                $theme-colors
+    (
+        'primary': $primary,
+        'secondary': $secondary,
+        'success': $success,
+        'info': $info,
+        'warning': $warning,
+        'danger': $danger,
+        'light': $light,
+        'dark': $dark,
+        'blue': #303C54,
+    ),
+    $theme-colors
 );

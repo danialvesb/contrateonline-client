@@ -1,58 +1,74 @@
 <template>
   <dashboard-template>
     <template v-slot:header>
-      <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)"/>
+      <ui-header v-on:checkboxToggleHeader="toogleSideBar($event)">
+        <template v-slot:navbar-right>
+          <dropdown title="" icon=""
+                    :options="optionsDropdown"/>
+        </template>
+      </ui-header>
     </template>
     <template v-slot:breadcrumbs>
       <ui-breadcrumbs>
-        <li>Minhas solicitações</li>
+        <li>Detalhes da solicitação</li>
       </ui-breadcrumbs>
     </template>
     <template v-slot:sidebar>
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <ui-card :onClick="openDetailsSolicitation"
-               :active="isActiveSideBar" :data="test"></ui-card>
+      <div :class="[{'container-disabled': isActiveSidebar},'container']">
+        <section class="header-section">
+
+        </section>
+        <section class="main-section">
+
+        </section>
+        <section class="footer-section">
+
+        </section>
+      </div>
     </template>
   </dashboard-template>
 </template>
-
 <script>
 import dashboardTemplate from '@/templates/page-dashboard/index.vue';
 import { uiMenuSideBar } from '@/components/menu/index';
 import { uiHeader } from '@/components/header/index';
+import { dropdown } from '@components/dropdown/index';
 import { uiBreadcrumbs } from '@components/breadcrumbs/index';
-import { uiCard } from '@components/cards/index';
 
 export default {
-  name: 'solicitations',
+  name: 'dashboard',
   components: {
-    uiCard,
+    dropdown,
     dashboardTemplate,
     uiMenuSideBar,
     uiHeader,
     uiBreadcrumbs,
   },
+  computed: {
+    isActiveSidebar() {
+      return this.$store.getters.isActiveSideBar;
+    },
+  },
   data() {
     return {
       sidebar: false,
-      test: {
-        title: 'Card teste',
-      },
+      optionsDropdown: [
+        'Option 01',
+        'Option 02',
+        'Option 03',
+        'Option 04',
+      ],
     };
   },
   methods: {
-    openDetailsSolicitation() {
-      this.$router.push('/solicitacao/visualizar/1');
+    onClick(event) {
+      event();
     },
     toogleSideBar(event) {
       this.sidebar = event;
-    },
-  },
-  computed: {
-    isActiveSideBar() {
-      return this.$store.getters.isActiveSideBar;
     },
   },
 };
@@ -60,4 +76,5 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/scss/style.scss";
+@import "~@/views/detailsSolicitation/styles.scss";
 </style>

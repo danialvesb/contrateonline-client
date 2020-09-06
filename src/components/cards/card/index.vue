@@ -1,6 +1,7 @@
 <template>
-  <button class="ui-container" @click="openDetails()" :disabled="active">
-    <div class="card-header">
+  <button :class="[{'button-inactive': active}, 'ui-container']"
+          @click="onClick" :disabled="active">
+    <div :class="['card-header']">
       <p>{{ data.title }}</p>
     </div>
     <div class="card-body">
@@ -20,6 +21,10 @@ export default {
       require: true,
       type: Object,
     },
+    onClick: {
+      require: true,
+      type: Function,
+    },
     active: {
       require: true,
       type: Boolean,
@@ -27,9 +32,6 @@ export default {
   },
   name: 'uicard',
   methods: {
-    openDetails() {
-      this.$router.push(`/oferta/visualizar/${this.data.id}`);
-    },
   },
 };
 </script>

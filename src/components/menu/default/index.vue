@@ -18,7 +18,6 @@
     </ul>
   </div>
 </template>
-
 <script>
 import { uiButton } from '@/components/buttons/index';
 import separator from '@/components/separator.vue';

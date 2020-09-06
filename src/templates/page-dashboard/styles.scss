@@ -45,7 +45,7 @@
 
 .contentLeft {
     transition: 0.4s ease-in-out;
-    width: calc(100% - #{250px})!important;
+    width: calc(100% - #{200px})!important;
     background-color: $gray-600;
     button {
         transition: 0.4s ease-in-out;
@@ -53,6 +53,6 @@
     }
 }
 .headerLeft {
-    width: calc(100% - #{250px})!important;
+    width: calc(100% - #{200px})!important;
     transition: 0.4s ease-in-out!important;
 }
