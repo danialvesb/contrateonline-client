@@ -14,10 +14,10 @@
       </ui-breadcrumbs>
     </template>
     <template v-slot:sidebar>
-      <ui-menu-side-bar :sidebar="sidebar"/>
+      <ui-menu-side-bar/>
     </template>
     <template v-slot:content>
-      <div class="card-container">
+      <div :class="[{'disabled': isActiveSideBar},'card-container']" >
         <div class="card-header">
       <span class="title-card">
         <a>Detalhes da oferta</a>
@@ -117,7 +117,7 @@
             color="primary"
             margin="3px"
             @click="back"
-            :disabled="false">
+            :disabled="isActiveSideBar">
             Voltar
           </ui-button>
           <ui-button
@@ -125,7 +125,7 @@
             width="234px"
             margin="3px"
             color="success"
-            :disabled="false">
+            :disabled="isActiveSideBar">
             Solicitar
           </ui-button>
         </div>
@@ -159,6 +159,11 @@ export default {
     uiButton,
   },
   name: 'uiOfferDetails',
+  computed: {
+    isActiveSideBar() {
+      return this.$store.getters.isActiveSideBar;
+    },
+  },
   methods: {
     back() {
       this.$router.back();
