@@ -45,13 +45,15 @@
 }
 
 .card-container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.125);
     margin-top: 30px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $white;
-    width: 70%;
     min-width: 300px;
     max-width: 1234px;
     min-height: 979px;

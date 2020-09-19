@@ -38,7 +38,7 @@ button:hover {
     height: 160px;
     background-color: $white;
     margin: 10px;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     transition: width 0.1s ease-in-out;
     cursor: pointer;
@@ -54,7 +54,8 @@ button:hover {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
     p {
         margin: 1px;
 
@@ -84,7 +85,8 @@ button:hover {
     padding: 7px;
     background-color: $primary;
     color: $gray-700;
-
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
     p {
         margin: 0;
     }

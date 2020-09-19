@@ -1,7 +1,7 @@
 <template>
-  <div class="input-group">
+  <div class="input-group" :style="{width: width}">
     <font-awesome-icon icon="search"/>
-    <input type="text" class="form-control" placeholder="Pesquisar..."/>
+    <input type="text" class="form-control" :placeholder="placeholder"/>
   </div>
 </template>
 
@@ -9,6 +9,16 @@
 
 export default {
   name: 'uiInput',
+  props: {
+    width: {
+      type: String,
+      required: true,
+    },
+    placeholder: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
