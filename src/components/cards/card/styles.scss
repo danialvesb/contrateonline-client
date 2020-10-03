@@ -20,15 +20,15 @@ button {
     border: 0;
 }
 
-button:hover {
-    .card-header {
-        background-color: $primary-hover;
-    }
-
-    .card-footer {
-        background-color: $primary-hover;
-    }
-}
+//button:hover {
+//    .card-header {
+//        background-color: $primary-hover;
+//    }
+//
+//    .card-footer {
+//        background-color: $primary-hover;
+//    }
+//}
 
 .ui-container {
     display: flex;
@@ -92,13 +92,13 @@ button:hover {
     }
 }
 
-.button-inactive:hover {
-    cursor: default;
-    .card-header {
-        background-color: $primary;
-    }
-
-    .card-footer {
-        background-color: $primary;
-    }
-}
+//.button-inactive:hover {
+//    cursor: default;
+//    .card-header {
+//        background-color: $primary;
+//    }
+//
+//    .card-footer {
+//        background-color: $primary;
+//    }
+//}
