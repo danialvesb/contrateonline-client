@@ -8,7 +8,7 @@ Vue.use({
   install(Vue) {
     // eslint-disable-next-line no-param-reassign
     Vue.prototype.$http = axios.create({
-      baseURL: 'http://192.168.3.103:8000/api',
+      baseURL: 'http://34.236.96.150/api/',
     });
     Vue.prototype.$http.interceptors.request.use(async (config) => {
       if (!config.url.endsWith('login') || !config.url.endsWith('refresh')) {

@@ -14,7 +14,8 @@
     <template v-slot:content>
       <div class="content">
         <ui-card :onClick="openDetailsSolicitation"
-                 :active="isActiveSideBar" :data="test"></ui-card>
+                 width="50%"
+                 :active="isActiveSideBar" :data="test"/>
       </div>
     </template>
   </dashboard-template>
