@@ -1,7 +1,53 @@
+.content {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: solid 1px;
+    border-color: rgba(0, 0, 0, 0.125);
+    overflow-y: hidden;
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    min-height: 100px;
+    width: 100%;
+    background-color: #1f62a8;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.content-cards {
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+
 .spin {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
     padding-top: 50px;
+}
+
+.title-section {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.input-search {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -12,8 +12,11 @@
       <ui-menu-side-bar :sidebar="sidebar"/>
     </template>
     <template v-slot:content>
-      <ui-card :onClick="openDetailsSolicitation"
-               :active="isActiveSideBar" :data="test"></ui-card>
+      <div class="content">
+        <ui-card :onClick="openDetailsSolicitation"
+                 width="50%"
+                 :active="isActiveSideBar" :data="test"/>
+      </div>
     </template>
   </dashboard-template>
 </template>
@@ -60,4 +63,5 @@ export default {
 
 <style scoped lang="scss">
 @import "~@/assets/scss/style.scss";
+@import "~@/views/solicitations/styles.scss";
 </style>

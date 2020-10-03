@@ -1,6 +1,7 @@
 <template>
   <button :class="[{'button-inactive': active}, 'ui-container']"
-          @click="onClick" :disabled="active">
+          @click="onClick" :disabled="active"
+    :style="{width: width}">
     <div :class="['card-header']">
       <p>{{ data.title }}</p>
     </div>
@@ -29,15 +30,18 @@ export default {
       require: true,
       type: Boolean,
     },
+    width: {
+      require: false,
+      type: String,
+    },
   },
   name: 'uicard',
-  methods: {
-  },
+  methods: {},
 };
 </script>
 
 <style scoped lang="scss">
-  @import "~@/assets/scss/_variables.scss";
-  @import "~@/components/cards/card/styles.scss";
+@import "~@/assets/scss/_variables.scss";
+@import "~@/components/cards/card/styles.scss";
 
 </style>

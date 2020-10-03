@@ -3,6 +3,7 @@
     :class="[
       { 'loading': loading},
       `color-${color}`,
+      {'disabled': disabled},
     ]"
     :style="[{fontSize: `${fontSize}rem`,
     height: height,
